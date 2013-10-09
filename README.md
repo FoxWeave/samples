@@ -1,6 +1,6 @@
 Samples repository.
 
-Requires Gradle to build:
+Requires [Gradle](http://www.gradle.org/) to build:
 
     gradle clean assemble
 
