@@ -1,0 +1,25 @@
+apply plugin: 'war'
+
+war.archiveName = 'weave-bookshop.war'
+
+dependencies {
+    compile ("com.foxweave:foxweave-commons-common:${foxweaveVersion}");
+    compile ("com.foxweave:foxweave-cloudbees-api-jee:${foxweaveVersion}");
+
+    compile "org.slf4j:slf4j-api:${slf4jVersion}"
+    compile "org.slf4j:slf4j-simple:${slf4jVersion}"
+    compile "com.sun.jersey:jersey-server:${jerseyVersion}";
+    compile "com.sun.jersey:jersey-servlet:${jerseyVersion}";
+    compile "com.sun.jersey:jersey-core:${jerseyVersion}";
+    compile "com.sun.jersey:jersey-json:${jerseyVersion}";
+    compile "com.sun.jersey.contribs:jersey-guice:${jerseyVersion}";
+    compile "com.google.inject:guice:${guiceVersion}";
+    compile "com.google.inject.extensions:guice-servlet:${guiceVersion}";
+    compile "com.google.guava:guava:10.0.1";
+
+    provided "javax.servlet:servlet-api:${servletAPIVersion}";
+
+    testCompile "com.sun.jersey:jersey-client:${jerseyVersion}";
+    testCompile "junit:junit:${junitVersion}";
+}
+

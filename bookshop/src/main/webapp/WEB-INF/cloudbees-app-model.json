@@ -1,0 +1,26 @@
+{
+    "customer": {
+        "label": "Customer",
+        "fields" : [
+            {"name":"id", "label":"Id", "provideOn": {"create": "mandatory"}},
+            {"name":"firstName","label":"First Name", "provideOn": {"create": "mandatory"}},
+            {"name":"lastName", "label":"Last Name", "provideOn": {"create": "mandatory"}},
+            {"name":"email","label":"Email", "provideOn": {"create": "mandatory"}}
+        ],
+        "rest": "/api/customer"
+    },
+    "shipment": {
+        "label": "Shipment",
+        "fields" : [
+            {"name":"productName","label":"Product Name", "provideOn": {"create": "mandatory"}},
+            {"name":"customer","label":"Customer",
+                "fields" : [
+                    {"name":"firstName","label":"First Name"},
+                    {"name":"lastName", "label":"Last Name"},
+                    {"name":"email","label":"Email"}
+                ]
+            }
+        ],
+        "rest": "/api/shipment"
+    }
+}

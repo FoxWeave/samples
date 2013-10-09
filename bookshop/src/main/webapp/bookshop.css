@@ -1,0 +1,11 @@
+tr.rowData {
+    cursor: pointer;
+}
+
+thead tr {
+    background-color: #B9D6F3;
+}
+
+tr.active {
+    background-color: #b9f359;
+}

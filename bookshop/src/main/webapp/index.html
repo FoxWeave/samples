@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>WEAVE@cloud Bookshop Service</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+    </style>
+    <link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://getbootstrap.com/2.3.2/assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <meta name="chromesniffer" id="chromesniffer_meta" content="{&quot;Bootstrap&quot;:-1,&quot;jQuery&quot;:&quot;1.9.1&quot;}"><script type="text/javascript" src="chrome-extension://homgcnaoacgigpkkljjjekpignblkeae/detector.js"></script></head>
+
+    <script src="http://getbootstrap.com/2.3.2/assets/js/jquery.js"></script>
+    <script src="http://getbootstrap.com/2.3.2/assets/js/bootstrap.js"></script>
+
+    <script src="bookshop.js"></script>
+    <link href="bookshop.css" rel="stylesheet">
+
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="#">WEAVE@cloud Bookshop</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#shipping">Book Shipping</a></li>
+                </ul>
+                <form class="navbar-form pull-right">
+                    <input class="span2" type="text" placeholder="Email">
+                    <input class="span2" type="password" placeholder="Password">
+                    <button type="submit" class="btn">Sign in</button>
+                </form>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <h1>Book Shipping</h1>
+    <div id="bookTable">
+        <table class="table table-bordered table-condensed">
+            <thead>
+                <tr><th colspan="2" style="text-align: center; font-size: larger;">Books</th></tr>
+                <tr><th>Title</th><th>Author</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <a id="customerTableRefresh" class="btn btn-mini" href="#"><i class="icon-refresh"></i></a>
+    <div id="customerTable">
+        <table class="table table-bordered table-condensed">
+            <thead>
+                <tr><th colspan="3" style="text-align: center; font-size: larger;">Customers</th></tr>
+                <tr><th>First Name</th><th>Last Name</th><th>Email</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <p/>
+
+    <button id="shipNowBtn" class="btn">Ship Now</button>
+
+    <hr>
+
+    <footer>
+        <p>© CloudBees Inc. 2013</p>
+    </footer>
+
+</div> <!-- /container -->
+
+</body></html>

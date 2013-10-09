@@ -1,0 +1,3 @@
+rootProject.name = 'foxweave-samples'
+
+include ':bookshop'

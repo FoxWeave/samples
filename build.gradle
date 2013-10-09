@@ -1,0 +1,64 @@
+project.ext.set("foxweaveVersion", '0.2-SNAPSHOT')
+
+project.ext.set("servletAPIVersion", '2.5')
+project.ext.set("slf4jVersion", '1.7.5')
+project.ext.set("jsonlibVersion", '20090211')
+project.ext.set("httpclientVersion", '3.1')
+project.ext.set("guiceVersion", '3.0')
+project.ext.set("jerseyVersion", '1.16')
+project.ext.set("h2databaseVersion", '1.3.172')
+project.ext.set("junitVersion", '4.8.1')
+
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+
+    project.buildDir = 'target';
+    project.ext.set('groupId', 'com.foxweave.sample');
+    project.ext.set('artifactId', project.archivesBaseName);
+    project.version = '1.0';
+
+    repositories {
+        mavenLocal()
+        if (project.foxweaveVersion.endsWith("-SNAPSHOT")) {
+            maven {
+                url "http://maven.foxweave.com/snapshots/"
+            }
+        } else {
+            maven {
+                url "http://maven.foxweave.com/releases/"
+            }
+        }
+        mavenCentral()
+    }
+
+    configurations {
+        provided {
+            description = "provided 'scope'"
+            transitive = true
+        }
+        compile.transitive = true
+    }
+
+    sourceSets.main.compileClasspath += configurations.provided
+
+    sourceCompatibility = 1.6
+
+	eclipse {
+		project {
+			name = archivesBaseName
+		}
+	}
+
+    idea {
+        // http://gradle.org/docs/current/dsl/org.gradle.plugins.ide.idea.model.IdeaModule.html
+		module {
+            name = archivesBaseName
+            scopes.PROVIDED.plus += configurations.provided
+		}
+    }
+}
