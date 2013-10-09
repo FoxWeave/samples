@@ -1,3 +1,3 @@
 Simple "Bookshop" service RUN@cloud sample app.
 
-<object width="640" height="480"><param name="movie" value="//www.youtube.com/v/agbL9YWeC90?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="//www.youtube.com/v/agbL9YWeC90?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="640" height="480" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+[![ScreenShot](https://raw.github.com/FoxWeave/samples/master/bookshop/youtubeh.png)](http://www.youtube.com/v/agbL9YWeC90)
